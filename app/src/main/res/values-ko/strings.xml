@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android_HW_1wk01_pr</string>
+    <string name="text1">여기는 한국어 버전</string>
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+
+</resources>
