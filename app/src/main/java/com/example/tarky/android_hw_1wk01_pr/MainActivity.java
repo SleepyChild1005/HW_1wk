@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String before_str;
@@ -20,6 +24,23 @@ public class MainActivity extends AppCompatActivity {
         if (acB != null){
             acB.hide();
         }
+
+        TextView text1 = (TextView)findViewById(R.id.text1);
+        text1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("MainActivity", "hello onClick");
+                Toast.makeText(MainActivity.this, ((TextView)view).getText().toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_main2);
+            }
+        });
 
         before_str = null;
 
@@ -47,4 +68,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void btnPressed(View v) {
+        switch (v.getId()) {
+            case R.id.btn1:
+                break;
+            case R.id.btn2:
+                break;
+            default:
+                break;
+        }
+
+        if(v.getId() == R.id.btn1) {
+
+        }
+        else {
+
+        }
+    }
 }
